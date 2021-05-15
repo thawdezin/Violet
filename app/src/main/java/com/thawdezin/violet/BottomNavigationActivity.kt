@@ -14,6 +14,7 @@ class BottomNavigationActivity : AppCompatActivity() {
                 //BottomAppBarNoFab(getMyActionImage = { img }, getMyNavigationImage = { img })
             }
         }
+        setContentView(view)
 
     }
 

@@ -8,6 +8,7 @@ import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
@@ -32,9 +33,9 @@ class AdapterListVsScrollerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val contentView = ComposeView(context = applicationContext).apply {
             setContent {
-                MaterialTheme() {
+                MaterialTheme {
                     val state = CheckState()
-                    Column() {
+                    Column {
                         MainView(state = state) // Overlap with Button
                         Button(onClick = {
                             Toast.makeText(applicationContext, "Button", Toast.LENGTH_SHORT).show()

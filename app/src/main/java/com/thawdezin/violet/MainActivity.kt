@@ -16,13 +16,12 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-@Suppress("UNCHECKED_CAST")
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val contentView = ComposeView(context = applicationContext).apply {
             setContent {
-                mainContent()
+                MainContent()
             }
             // // since no window is bound
         }
@@ -31,27 +30,28 @@ class MainActivity : AppCompatActivity() {
 
     @Preview
     @Composable
-    fun mainContent() {
+    fun MainContent() {
         MaterialTheme {
             Scaffold {
                 Row(Modifier.scrollable(rememberScrollState(), Orientation.Vertical)) {
                     Column {
-                        showButton(ConstraintLayout::class.javaObjectType as Class<Any>)
-                        showButton(AdapterListVsScrollerActivity::class.javaObjectType as Class<Any>)
-                        showButton(ScrollerOnDataChange::class.javaObjectType as Class<Any>)
-                        showButton(StackLayoutActivity::class.javaObjectType as Class<Any>)
-                        showButton(NestedScrollActivity::class.javaObjectType as Class<Any>)
-                        showButton(ImageActivity::class.javaObjectType as Class<Any>)
-                        showButton(DateTimeActivity::class.javaObjectType as Class<Any>)
-                        showButton(DateTimeActivity::class.javaObjectType as Class<Any>)
-                        showButton(TwoEqualContainerActivity::class.javaObjectType as Class<Any>)
-                        showButton(BottomNavigationActivity::class.javaObjectType as Class<Any>)
-                        showButton(TextChangedOnButtonClickActivity::class.javaObjectType as Class<Any>)
-                        showButton(MultiViewWithoutFragment::class.javaObjectType as Class<Any>)
-                        showButton(TestingActivity::class.javaObjectType as Class<Any>)
-                        showButton(FullFeatureTableActivity::class.javaObjectType as Class<Any>)
-                        showButton(DrawModel::class.javaObjectType as Class<Any>)
-                        showButton(goTo = April25TutorialActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(ConstraintLayoutTest::class.java as Class<Any>)
+                        ShowButton(AdapterListVsScrollerActivity::class.java as Class<Any>)
+                        ShowButton(ScrollerOnDataChange::class.java as Class<Any>)
+                        ShowButton(StackLayoutActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(NestedScrollActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(ImageActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(DateTimeActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(DateTimeActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(TwoEqualContainerActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(BottomNavigationActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(TextChangedOnButtonClickActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(MultiViewWithoutFragment::class.javaObjectType as Class<Any>)
+                        ShowButton(TestingActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(FullFeatureTableActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(DrawModel::class.javaObjectType as Class<Any>)
+                        ShowButton(April25TutorialActivity::class.javaObjectType as Class<Any>)
+                        ShowButton(May15::class.javaObjectType as Class<Any>)
                     }
                 }
             }
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Composable
-    private fun showButton(goTo: Class<Any>?) {
+    private fun ShowButton(goTo: Class<Any>?) {
 
         //val readableClassName = goTo!!.simpleName.split(("(?=\\p{Upper})").toRegex()).dropLastWhile { it.isEmpty() }
                 //.toTypedArray().joinToString(prefix = "", postfix = "", separator = " ")

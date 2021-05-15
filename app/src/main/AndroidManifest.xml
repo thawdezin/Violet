@@ -9,8 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ConstraintLayout"></activity>
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".May15"
+            android:exported="true" />
+        <activity android:name=".ConstraintLayoutTest" />
         <activity android:name=".April25TutorialActivity" />
         <activity android:name=".FullFeatureTableActivity" />
         <activity android:name="com.thawdezin.TestLayoutActivity" />
@@ -30,6 +33,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

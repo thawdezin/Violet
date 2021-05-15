@@ -2,29 +2,29 @@ package com.thawdezin.violet
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.material.MaterialTheme
 import androidx.compose.ui.platform.ComposeView
 
 import androidx.compose.ui.tooling.preview.Preview
 
-class ConstraintLayout : AppCompatActivity() {
+class ConstraintLayoutTest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val view = ComposeView(applicationContext).apply{
             setContent {
-                MaterialTheme() {
-//                Box(
-//                    //gravity = Alignment.BottomCenter,
-//                    modifier = Modifier.fillMaxWidth().fillMaxHeight(),
-//                    backgroundColor = Color.Green
-//                ) {
-//
-//                }
+                MaterialTheme {
+                Box(
+
+                ) {
+
+                }
                     TestConstraintLayout()
                 }
             }
         }
+        setContentView(view)
     }
 }
 
@@ -32,7 +32,7 @@ class ConstraintLayout : AppCompatActivity() {
 @Composable
 fun TestConstraintLayout(){
 //    val amountTag = "N"
-//    ConstraintLayout(
+//    ConstraintLayoutTest(
 //        modifier = Modifier.fillMaxHeight().fillMaxWidth(),
 //        constraintSet = ConstraintSet{
 ////        val decreaseTag = "Tag"
