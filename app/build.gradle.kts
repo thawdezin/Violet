@@ -50,7 +50,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        viewBinding = true
+        //viewBinding = true
         compose = true
     }
     composeOptions {
@@ -61,21 +61,21 @@ android {
 
 dependencies {
     //implementation(fileTree(mapOf("dir":"libs", "include":listOf("*.jar"))))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.10")
     implementation("androidx.appcompat:appcompat:1.3.0")
-    implementation("androidx.core:core-ktx:1.5.0")
-    implementation("androidx.activity:activity-ktx:1.3.0-alpha08")
-    implementation("androidx.fragment:fragment-ktx:1.3.4")
+    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.activity:activity-ktx:1.3.0-rc02")
+    implementation("androidx.fragment:fragment-ktx:1.3.5")
     // View
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("androidx.cardview:cardview:1.0.0")
     //Material Design Theme
-    implementation("com.google.android.material:material:1.3.0")
+    implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.preference:preference-ktx:1.1.1")
     //Testing
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     implementation("com.android.support:multidex:1.0.3")
 
     /*********************************************************
@@ -148,7 +148,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:21.0.1")
     implementation("com.google.firebase:firebase-auth-ktx")
     //Firestore
-    implementation("com.google.firebase:firebase-firestore:23.0.0")
+    implementation("com.google.firebase:firebase-firestore:23.0.2")
     //Firebase RecyclerView UI
     implementation("com.firebaseui:firebase-ui-auth:7.1.1")
     implementation("com.firebaseui:firebase-ui-firestore:7.1.1")
@@ -182,13 +182,13 @@ dependencies {
      *  CameraX
      **************************************************************************/
     // CameraX core library using camera2 implementation
-    implementation("androidx.camera:camera-camera2:1.1.0-alpha04")
+    implementation("androidx.camera:camera-camera2:1.1.0-alpha06")
     // CameraX Lifecycle Library
-    implementation("androidx.camera:camera-lifecycle:1.1.0-alpha04")
+    implementation("androidx.camera:camera-lifecycle:1.1.0-alpha06")
     // CameraX View class
-    implementation("androidx.camera:camera-view:1.0.0-alpha24")
+    implementation("androidx.camera:camera-view:1.0.0-alpha26")
     // CameraX Extensions
-    implementation("androidx.camera:camera-extensions:1.0.0-alpha24")
+    implementation("androidx.camera:camera-extensions:1.0.0-alpha26")
 
     /**
      *      Photo View
@@ -199,9 +199,9 @@ dependencies {
     /*************************************************************************
      *  Jetpack Compose
      **************************************************************************/
-    val composeVersion by extra("1.0.0-beta07")
-    implementation("androidx.activity:activity-compose:1.3.0-alpha08")
-    implementation("androidx.compose.ui:ui:1.0.0-beta07") // composeVersion
+    val composeVersion by extra("1.0.0-rc02")
+    implementation("androidx.activity:activity-compose:1.3.0-rc02")
+    implementation("androidx.compose.ui:ui:1.0.0-rc02") // composeVersion
     // Tooling support (Previews, etc.)
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
@@ -219,7 +219,7 @@ dependencies {
     // UI Tests
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$composeVersion")
     // Navigation
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha01")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha04")
     //
     implementation("com.google.android.material:compose-theme-adapter:$composeVersion")
 

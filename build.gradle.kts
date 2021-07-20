@@ -13,7 +13,7 @@ buildscript {
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
         // Add the Crashlytics Gradle plugin (be sure to add version
         // 2.0.0 or later if you built your app with Android Studio 4.1).
-        classpath("com.google.firebase:firebase-crashlytics-gradle:2.6.1")
+        classpath("com.google.firebase:firebase-crashlytics-gradle:2.7.1")
     }
 }
 
